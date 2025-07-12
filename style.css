@@ -239,13 +239,14 @@ body{
 
 
 /*---------------------------Education & Internship---------------------------*/
-
-.education-content .row{
+.education-content .row {
   display: flex;
   border-radius: 5px;
-  height: 400px;
+  height: auto; /* ✅ Now the height will adjust based on content */
   margin-bottom: 250px;
+  flex-wrap: wrap; /* ✅ Ensures proper stacking on smaller screens */
 }
+
 
 .education-content .title{
   color: #fed700;
@@ -475,6 +476,14 @@ body{
     width: 970px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .education-content .row {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+}
+
 
 @media(max-width:1050px){
   .FirstElement{ 
